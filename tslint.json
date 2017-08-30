@@ -86,7 +86,7 @@
     ],
     "radix": true,
     "semicolon": [
-      true,
+      false,
       "always"
     ],
     "triple-equals": [
@@ -138,5 +138,6 @@
     "no-access-missing-member": true,
     "templates-use-public": true,
     "invoke-injectable": true
-  }
+  },
+  "extends": "tslint-config-standard"
 }
