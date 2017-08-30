@@ -1,14 +1,15 @@
 import { AppPage } from './app.po'
 
-describe('angular4-demo-app App', () => {
+describe('Testing web page', () => {
   let page: AppPage
 
   beforeEach(() => {
     page = new AppPage()
   })
 
-  it('should display welcome message', () => {
+  it('should display the title of the page', () => {
     page.navigateTo()
-    expect(page.getParagraphText()).toEqual('Welcome to app!')
+
+    expect(page.getTitle()).toEqual('Angular 4 demo!')
   })
 })
