@@ -4,7 +4,7 @@ import { User } from '../users/user/user.type'
 import 'rxjs/add/operator/toPromise'
 
 @Injectable()
-export class UserService {
+export class UsersService {
   private URL = 'https://jsonplaceholder.typicode.com/users'
 
   constructor (private http: Http) {}
