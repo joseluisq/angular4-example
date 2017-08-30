@@ -1,7 +1,14 @@
 <h3>User List</h3>
 
-<ul>
-  <li *ngFor="let user of users">
-    <app-user [user]="user"></app-user>
-  </li>
-</ul>
+<table border="0" cellpadding=0 cellspacing=0>
+  <tr>
+    <th width="48">ID</th>
+    <th width="150">Name</th>
+    <th width="330">Address</th>
+    <th>&nbsp;</th>
+  </tr>
+</table>
+
+<div *ngFor="let user of users">
+  <app-user [user]="user"></app-user>
+</div>
