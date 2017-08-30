@@ -1,5 +1,10 @@
-{{user.id}}
-
-<b>{{user.name}}</b>
-
-<a href="#" (click)="onSelect(user)"><small> View Addresses</small></a>
+<table border="0" cellpadding=0 cellspacing=0>
+  <tr>
+    <td width="40">{{user.id}}</td>
+    <td width="130">{{user.name}}</td>
+    <td width="330">{{user.address.street}} {{user.address.suite}} {{user.address.zipcode}} {{user.address.city}}</td>
+    <td>
+      <a href="#" (click)="onSelect(user)">View album</a>
+    </td>
+  </tr>
+</table>
