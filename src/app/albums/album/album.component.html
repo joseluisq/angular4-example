@@ -1,0 +1,17 @@
+<h3>Albums by {{ selectedUser?.name }}</h3>
+
+<table border="0" cellpadding=0 cellspacing=0>
+  <tr>
+    <th width="48">ID</th>
+    <th width="330">Title</th>
+    <th>&nbsp;</th>
+  </tr>
+
+  <tr *ngFor="let album of albums">
+    <td>{{ album.id }}</td>
+    <td>{{ album.title }}</td>
+    <td>
+      <a [routerLink]="['/albums', album.id, 'photos']" (click)="onSelect(album)">View photos</a>
+    </td>
+  </tr>
+</table>

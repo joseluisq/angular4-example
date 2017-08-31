@@ -11,6 +11,8 @@ export class UserComponent {
   title = 'User Component'
   selectedUser: User
 
+  constructor () {}
+
   onSelect (user: User): void {
     this.selectedUser = user
   }

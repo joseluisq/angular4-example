@@ -4,7 +4,7 @@
     <td width="130">{{user.name}}</td>
     <td width="330">{{user.address.street}} {{user.address.suite}} {{user.address.zipcode}} {{user.address.city}}</td>
     <td>
-      <a href="#" (click)="onSelect(user)">View album</a>
+      <a [routerLink]="['/user', user.id, 'albums']" (click)="onSelect(user)">View album</a>
     </td>
   </tr>
 </table>

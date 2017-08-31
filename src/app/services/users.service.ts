@@ -9,6 +9,9 @@ export class UsersService {
 
   constructor (private http: Http) {}
 
+  private user: User
+  private users: User[] = []
+
   /**
    * Get all users from data source
    */
@@ -16,7 +19,24 @@ export class UsersService {
     return this.http
       .get(this.URL)
       .toPromise()
-      .then(response => response.json() as User[])
+      .then(response => {
+        this.users = response.json() as User[]
+        return this.users
+      })
+      .catch(this.handleError)
+  }
+
+  /**
+   * Get one user by id from data source
+   */
+  getUserById (id: number): Promise<User> {
+    return this.http
+      .get(`${this.URL}/${id}`)
+      .toPromise()
+      .then(response => {
+        this.user = response.json() as User
+        return this.user
+      })
       .catch(this.handleError)
   }
 
