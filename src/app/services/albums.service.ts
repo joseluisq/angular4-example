@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise'
 
 @Injectable()
 export class AlbumsService {
-  private URL = 'https://jsonplaceholder.typicode.com/users'
+  private URL = 'https://jsonplaceholder.typicode.com'
 
   constructor (private http: Http) {}
 
@@ -14,9 +14,20 @@ export class AlbumsService {
    */
   getAlbumsByUserId (userId: number): Promise<Album[]> {
     return this.http
-      .get(`${this.URL}/${userId}/albums`)
+      .get(`${this.URL}/users/${userId}/albums`)
       .toPromise()
       .then(response => response.json() as Album[])
+      .catch(this.handleError)
+  }
+
+  /**
+   * Get one Album by id from data source
+   */
+  getAlbumById (id: number): Promise<Album> {
+    return this.http
+      .get(`${this.URL}/albums/${id}`)
+      .toPromise()
+      .then(response => response.json() as Album)
       .catch(this.handleError)
   }
 

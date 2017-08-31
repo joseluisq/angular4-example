@@ -10,7 +10,11 @@ import { routing } from './app.routes'
 
 @NgModule({
   imports: [BrowserModule, HttpModule, routing],
-  declarations: [AppComponent, ...UserComponents, ...AlbumComponents],
+  declarations: [
+    AppComponent,
+    ...UserComponents,
+    ...AlbumComponents
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
