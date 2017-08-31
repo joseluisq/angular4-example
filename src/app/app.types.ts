@@ -14,3 +14,9 @@ export interface Address {
   city: string
   zipcode: string
 }
+
+export interface Album {
+  userId: number
+  id: number
+  title: string
+}

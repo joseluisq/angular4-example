@@ -1,4 +1,4 @@
-import { User } from '../users/user/user.type'
+import { User } from '../app.types'
 
 export const MockUsers: User[] = [
   {

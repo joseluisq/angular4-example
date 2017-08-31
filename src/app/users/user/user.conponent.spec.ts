@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { NO_ERRORS_SCHEMA } from '@angular/core'
 import { UserComponent } from './user.component'
 import { MockUsers } from '../../services/users.mock'
-import { User } from '../../users/user/user.type'
+import { User } from '../../app.types'
 
 describe('Testing User component', () => {
   beforeEach(() => {

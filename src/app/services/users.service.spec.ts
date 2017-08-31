@@ -8,7 +8,7 @@ import {
 import { UsersService } from '../services/users.service'
 import { MockUsers } from './users.mock'
 import { MockBackend, MockConnection } from '@angular/http/testing'
-import { User } from '../users/user/user.type'
+import { User } from '../app.types'
 
 describe('Service testing: User', () => {
   beforeEach(() => {

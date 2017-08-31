@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { User } from './user.type'
+import { User } from '../../app.types'
 
 @Component({
   selector: 'app-user',

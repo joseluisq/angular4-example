@@ -8,7 +8,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core'
 import { UserListComponent } from '../user-list/user-list.component'
 import { MockUsers } from '../../services/users.mock'
 import { UsersService } from '../../services/users.service'
-import { User } from '../../users/user/user.type'
+import { User } from '../../app.types'
 import {
   BaseRequestOptions,
   Http,
